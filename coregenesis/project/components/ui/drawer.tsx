@@ -37,109 +37,91 @@ const Drawer = ({
   );
 };
 
-interface DrawerTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  onClick: () => void;
-}
-
-const DrawerTrigger = React.forwardRef<HTMLButtonElement, DrawerTriggerProps>(
-  ({ className, children, ...props }, ref) => (
-    <button
-      ref={ref}
-      className={cn('', className)}
-      {...props}
-    >
-      {children}
-    </button>
-  )
-);
+const DrawerTrigger = React.forwardRef<
+  HTMLButtonElement,
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+>(({ className, children, ...props }, ref) => (
+  <button
+    ref={ref}
+    className={cn('', className)}
+    {...props}
+  >
+    {children}
+  </button>
+));
 DrawerTrigger.displayName = 'DrawerTrigger';
 
-interface DrawerContentProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
-}
-
-const DrawerContent = React.forwardRef<HTMLDivElement, DrawerContentProps>(
-  ({ className, children, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cn('p-4', className)}
-      {...props}
-    >
-      {children}
-    </div>
-  )
-);
+const DrawerContent = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, children, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn('p-4', className)}
+    {...props}
+  >
+    {children}
+  </div>
+));
 DrawerContent.displayName = 'DrawerContent';
 
-interface DrawerHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
-}
-
-const DrawerHeader = React.forwardRef<HTMLDivElement, DrawerHeaderProps>(
-  ({ className, children, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cn('grid gap-1.5 p-4 text-center sm:text-left', className)}
-      {...props}
-    >
-      {children}
-    </div>
-  )
-);
+const DrawerHeader = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, children, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn('grid gap-1.5 p-4 text-center sm:text-left', className)}
+    {...props}
+  >
+    {children}
+  </div>
+));
 DrawerHeader.displayName = 'DrawerHeader';
 
-interface DrawerFooterProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
-}
-
-const DrawerFooter = React.forwardRef<HTMLDivElement, DrawerFooterProps>(
-  ({ className, children, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cn('mt-auto flex flex-col gap-2 p-4', className)}
-      {...props}
-    >
-      {children}
-    </div>
-  )
-);
+const DrawerFooter = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, children, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn('mt-auto flex flex-col gap-2 p-4', className)}
+    {...props}
+  >
+    {children}
+  </div>
+));
 DrawerFooter.displayName = 'DrawerFooter';
 
-interface DrawerTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
-  children: React.ReactNode;
-}
-
-const DrawerTitle = React.forwardRef<HTMLHeadingElement, DrawerTitleProps>(
-  ({ className, children, ...props }, ref) => (
-    <h2
-      ref={ref}
-      className={cn(
-        'text-lg font-semibold leading-none tracking-tight',
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </h2>
-  )
-);
+const DrawerTitle = React.forwardRef<
+  HTMLHeadingElement,
+  React.HTMLAttributes<HTMLHeadingElement>
+>(({ className, children, ...props }, ref) => (
+  <h2
+    ref={ref}
+    className={cn(
+      'text-lg font-semibold leading-none tracking-tight',
+      className
+    )}
+    {...props}
+  >
+    {children}
+  </h2>
+));
 DrawerTitle.displayName = 'DrawerTitle';
 
-interface DrawerDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {
-  children: React.ReactNode;
-}
-
-const DrawerDescription = React.forwardRef<HTMLParagraphElement, DrawerDescriptionProps>(
-  ({ className, children, ...props }, ref) => (
-    <p
-      ref={ref}
-      className={cn('text-sm text-muted-foreground', className)}
-      {...props}
-    >
-      {children}
-    </p>
-  )
-);
+const DrawerDescription = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, children, ...props }, ref) => (
+  <p
+    ref={ref}
+    className={cn('text-sm text-muted-foreground', className)}
+    {...props}
+  >
+    {children}
+  </p>
+));
 DrawerDescription.displayName = 'DrawerDescription';
 
 export {
