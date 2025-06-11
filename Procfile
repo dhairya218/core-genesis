@@ -1,0 +1,1 @@
+web: cd coregenesis/backend && bash build.sh && gunicorn backend.wsgi:application 
