@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, CheckCircle2, Zap, Shield, Users } from 'lucide-react';
 import Link from 'next/link';
-import { staggerContainer, fadeIn, slideIn } from '@/lib/animations';
-import { getServices, getIconComponent, Service } from '@/lib/services';
+import { staggerContainer, fadeIn, slideIn } from '@/utils/animations';
+import { getServices, getIconComponent, Service } from '@/utils/services';
 import { useEffect, useState } from 'react';
 
 export default function HomePage() {
