@@ -5,10 +5,12 @@ import { Drawer as DrawerPrimitive } from 'vaul';
 
 import { cn } from '@/utils/utils';
 
+type DrawerProps = React.ComponentProps<typeof DrawerPrimitive.Root>;
+
 const Drawer = ({
   shouldScaleBackground = true,
   ...props
-}: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
+}: DrawerProps) => (
   <DrawerPrimitive.Root
     shouldScaleBackground={shouldScaleBackground}
     {...props}
