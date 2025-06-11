@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@700&family=Be+Vietnam+Pro:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Color Variables */
+    --color-cta-yellow: rgb(245, 168, 0);
+    --color-navbar-navy: rgb(13, 27, 42);
+    --color-background: rgb(245, 245, 245);
+    --color-text-light: rgb(34, 34, 34);
+    --color-text-dark: rgb(255, 255, 255);
+}
+
+@layer base {
+    body {
+        @apply bg-[rgb(245, 245, 245)] text-[rgb(34, 34, 34)];
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Sora', sans-serif;
+        font-weight: 700;
+    }
+}
+
+@layer components {
+    .btn-cta {
+        @apply bg-[rgb(245, 168, 0)] text-white px-6 py-3 rounded-md font-medium transition-all hover:opacity-90;
+    }
+
+    .navbar {
+        @apply bg-[rgb(13, 27, 42)] text-white;
+    }
+}
